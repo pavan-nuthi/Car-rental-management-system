@@ -31,12 +31,12 @@ The system uses 5 main tables:
 
 ## Key Features
 
- **Web Interface** - Easy-to-use Streamlit dashboard
-**Car Management** - Add vehicles to fleet
-**Location Management** - Manage rental locations
-**Booking System** - Update/delete bookings
-**Custom Queries** - Run SQL reports
-**Sample Data** - Pre-loaded with test data
+1. **Web Interface** - Easy-to-use Streamlit dashboard
+2. **Car Management** - Add vehicles to fleet
+3. **Location Management** - Manage rental locations
+4. **Booking System** - Update/delete bookings
+5. **Custom Queries** - Run SQL reports
+6. **Sample Data** - Pre-loaded with test data
 
 ## Quick Setup
 
