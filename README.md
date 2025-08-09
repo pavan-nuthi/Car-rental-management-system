@@ -47,9 +47,33 @@ pip install streamlit mysql-connector-python pandas streamlit-option-menu
 
 2. **Setup Database:**
 ```sql
+-- Step 1: Create the database
 CREATE DATABASE car_rental;
--- Run the SQL scripts in order
+USE car_rental;
 ```
+
+   **Run SQL scripts in this exact order:**
+   ```bash
+   # Step 2: Create tables and constraints
+   mysql -u root -p car_rental < CREATE_SCRIPTS.sql
+   
+   # Step 3: Create availability check function
+   mysql -u root -p car_rental < CHECK_AVAILABILITY.sql
+   
+   # Step 4: Insert sample data
+   mysql -u root -p car_rental < INSERT_SCRIPTS.sql
+   
+   # Step 5: Create trigger (Note: has a bug)
+   mysql -u root -p car_rental < INSERT_TRIGGER_FOR_BOOKING.sql
+   ```
+   
+   **Or run from MySQL command line:**
+   ```sql
+   SOURCE CREATE_SCRIPTS.sql;
+   SOURCE CHECK_AVAILABILITY.sql;
+   SOURCE INSERT_SCRIPTS.sql;
+   SOURCE INSERT_TRIGGER_FOR_BOOKING.sql;
+   ```
 
 3. **Configure Connection:**
 Update MySQL credentials in `CAR.py`
