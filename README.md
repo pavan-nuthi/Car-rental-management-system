@@ -63,7 +63,7 @@ USE car_rental;
    # Step 4: Insert sample data
    mysql -u root -p car_rental < INSERT_SCRIPTS.sql
    
-   # Step 5: Create trigger (Note: has a bug)
+   # Step 5: Create trigger
    mysql -u root -p car_rental < INSERT_TRIGGER_FOR_BOOKING.sql
    ```
    
