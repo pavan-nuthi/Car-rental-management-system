@@ -13,9 +13,12 @@ The project is a simple car rental system with 4 main operations:
 
 ## Project Structure
 
-- **`CAR.py`** - Main application with Streamlit UI
-- **`OPERATIONS.py`** - Contains all CRUD functions
-- **SQL Files** - Database setup and sample data
+**Files Overview:**
+- `CAR.py` - Main Streamlit app with navigation
+- `OPERATIONS.py` - Business logic (insrt, updat, delet, quer functions)
+- `CREATE_SCRIPTS.sql` - Database table creation
+- `INSERT_SCRIPTS.sql` - Sample data insertion
+- `QUERIES.sql` - Example analytical queries
 
 ## Database Tables
 
@@ -55,17 +58,3 @@ Update MySQL credentials in `CAR.py`
 ```bash
 streamlit run CAR.py
 ```
-
-## Important Notes
-
-⚠️ **Known Issues:**
-- Trigger file has a bug (references wrong table)
-- Custom query interface allows SQL injection
-- Limited CRUD operations (Insert: CAR/LOCATION only, Update/Delete: BOOKING only)
-
-**Files Overview:**
-- `CAR.py` - Main Streamlit app with navigation
-- `OPERATIONS.py` - Business logic (insrt, updat, delet, quer functions)
-- `CREATE_SCRIPTS.sql` - Database table creation
-- `INSERT_SCRIPTS.sql` - Sample data insertion
-- `QUERIES.sql` - Example analytical queries
